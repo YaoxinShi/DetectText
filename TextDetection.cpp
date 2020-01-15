@@ -200,7 +200,7 @@ void renderComponentsWithBoxes (Mat& SWTImage, std::vector<std::vector<SWTPoint2
 
     Mat out( output.size(), CV_8UC1 );
     outTemp.convertTo(out, CV_8UC1, 255.);
-    cvtColor (out, output, CV_GRAY2RGB);
+    cvtColor (out, output, cv::COLOR_GRAY2RGB);
 
     int count = 0;
     for (auto it : bb) {
@@ -250,7 +250,7 @@ void renderChainsWithBoxes (Mat& SWTImage,
 
     Mat out( output.size(), CV_8UC1 );
     outTemp.convertTo(out, CV_8UC1, 255);
-    cvtColor (out, output, CV_GRAY2RGB);
+    cvtColor (out, output, cv::COLOR_GRAY2RGB);
 
     int count = 0;
     for (auto& it : bb) {
@@ -305,7 +305,7 @@ Mat textDetection (const Mat& input, bool dark_on_light) {
 
     // Convert to grayscale
     Mat grayImage( input.size(), CV_8UC1 );
-    cvtColor ( input, grayImage, CV_RGB2GRAY );
+    cvtColor ( input, grayImage, cv::COLOR_RGB2GRAY );
     // Create Canny Image
     double threshold_low = 175;
     double threshold_high = 320;
@@ -371,7 +371,7 @@ Mat textDetection (const Mat& input, bool dark_on_light) {
     //imwrite ( "text.png", output4);
 
     Mat output5( input.size(), CV_8UC3 );
-    cvtColor (output4, output5, CV_GRAY2RGB);
+    cvtColor (output4, output5, cv::COLOR_GRAY2RGB);
 
 
     /*IplImage * output =

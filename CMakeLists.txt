@@ -1,6 +1,9 @@
 cmake_minimum_required (VERSION 3.2) 
 project (DetectText) 
 
+SET("OpenCV_DIR" "C:/Program Files (x86)/IntelSWTools/openvino/opencv/cmake/")
+SET("BOOST_ROOT" "C:/ws/tmp/boost_1_67_0/")
+
 include(CheckCXXCompilerFlag)
 CHECK_CXX_COMPILER_FLAG("-std=c++11" COMPILER_SUPPORTS_CXX11)
 CHECK_CXX_COMPILER_FLAG("-std=c++0x" COMPILER_SUPPORTS_CXX0X)

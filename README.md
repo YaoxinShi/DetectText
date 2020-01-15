@@ -4,20 +4,11 @@ DetectText
 Detect text with stroke width transform.
 
 ## Dependencies
-OpenCV 2.4+, boost.
+OpenCV 4.12, boost 1.67 (1.72 not working)
 
 ## Compile
 
-    g++ -o DetectText TextDetection.cpp FeaturesMain.cpp -lopencv_core -lopencv_highgui -lopencv_imgproc -I/path/to/current/directory
-
-where /path/to/current/directory is replaced with the absolute path to the current directory.
-
-### Using CMake
-
-    mkdir build
-    cd build
-    cmake ..
-    make
+	mkdir build; using CMake GUI, input code folder and build folder
 
 ## To run
 ./TextDetection input_file output_file dark_on_light

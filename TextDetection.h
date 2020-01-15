@@ -20,6 +20,7 @@
 #define TEXTDETECTION_H
 
 #include <opencv2/core/core.hpp>
+#include <opencv2/core/types_c.h>
 
 namespace DetectText {
 

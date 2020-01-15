@@ -56,7 +56,7 @@ Mat loadByteImage(const char * name) {
     if (image.empty()) {
         return Mat();
     }
-    cvtColor(image, image, CV_BGR2RGB);
+    cvtColor(image, image, cv::COLOR_BGR2RGB);
     return image;
 }
 
@@ -66,7 +66,7 @@ Mat loadFloatImage(const char * name) {
     if (image.empty()) {
         return Mat();
     }
-    cvtColor(image, image, CV_BGR2RGB);
+    cvtColor(image, image, cv::COLOR_BGR2RGB);
     Mat floatingImage(image.size(), CV_32FC3);
     image.convertTo(floatingImage, CV_32F, 1 / 255.);
     return floatingImage;
